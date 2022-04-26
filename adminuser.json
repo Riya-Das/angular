@@ -1,0 +1,98 @@
+{
+  "Users": [
+    {
+      "adminuser": "User",
+      "emailaddress": "riyadas2010bgp@gmail.com",
+      "username": "riya",
+      "Mobile": "8765434567",
+      "Password": "123",
+      "ConfirmPassword": "123",
+      "id": 1
+    },
+    {
+      "adminuser": "User",
+      "emailaddress": "rishavdas@gmail.com",
+      "username": "rishav",
+      "Mobile": "9876567891",
+      "Password": "123",
+      "ConfirmPassword": "123",
+      "id": 2
+    },
+    {
+      "adminuser": "User",
+      "emailaddress": "riyadas2010bgp@gmail.com",
+      "username": "riya",
+      "Mobile": "9876567891",
+      "Password": "123",
+      "ConfirmPassword": "123",
+      "id": 3
+    },
+    {
+      "adminuser": "User",
+      "emailaddress": "abc@fh",
+      "username": "abc",
+      "Mobile": "8767653567",
+      "Password": "123",
+      "ConfirmPassword": "123",
+      "id": 4
+    }
+  ],
+  "Admin": [
+    {
+      "adminuser": "Admin",
+      "emailaddress": "admin@admin",
+      "username": "admin",
+      "Mobile": "8765434567",
+      "Password": "123",
+      "ConfirmPassword": "123",
+      "id": 1
+    }
+  ],
+  "Posts": [
+    {
+      "adminuser": "User",
+      "emailaddress": "riyadas2010bgp@gmail.com",
+      "username": "riya",
+      "Mobile": "8765434567",
+      "Password": "123",
+      "ConfirmPassword": "123",
+      "id": 1
+    },
+    {
+      "adminuser": "Admin",
+      "emailaddress": "admin@admin",
+      "username": "admin",
+      "Mobile": "8765434567",
+      "Password": "123",
+      "ConfirmPassword": "123",
+      "id": 2
+    },
+    {
+      "adminuser": "User",
+      "emailaddress": "rishavdas@gmail.com",
+      "username": "rishav",
+      "Mobile": "9876567891",
+      "Password": "123",
+      "ConfirmPassword": "123",
+      "id": 3
+    },
+    {
+      "adminuser": "User",
+      "emailaddress": "riyadas2010bgp@gmail.com",
+      "username": "riya",
+      "Mobile": "9876567891",
+      "Password": "123",
+      "ConfirmPassword": "123",
+      "id": 4
+    },
+    {
+      "adminuser": "User",
+      "emailaddress": "abc@fh",
+      "username": "abc",
+      "Mobile": "8767653567",
+      "Password": "123",
+      "ConfirmPassword": "123",
+      "id": 5
+    }
+  ]
+}

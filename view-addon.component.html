@@ -1,0 +1,31 @@
+<app-admin-navbar></app-admin-navbar>
+<button><a href="./addAddon"><b>Add</b></a> </button>
+
+<table class="table" >
+    <thead style="background-color: brown;"> 
+        <tr>
+            <th scope="col">Plan Type</th>
+            <th scope="col">Plan Name</th>
+            <th scope="col">Plan Price</th>
+            <th scope="col">Description</th>
+            <th scope="col">Validity</th>
+            <th scope="col">Action</th>
+
+
+        </tr>
+    </thead>
+    <tbody style="background-color: rgb(214, 165, 165);">
+        <tr *ngFor="let row of addondata">
+            <td>{{row.addonType}}</td>
+            <td>{{row.addonName}}</td>
+            <td>{{row.addonPrice}}</td>
+            <td>{{row.addonDescription}}</td>
+            <td>{{row.addonValidity}}</td>
+            <td>
+                <button><a href="editAddon/{{row.id}}">Edit</a> </button>
+                <button (click)="DeletePlan(row.id)">Delete</button>
+            </td>
+            
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,17 @@
+<app-user-navbar></app-user-navbar>
+
+<div class="head"><b>Update Review </b></div>    
+<div class="body ">
+<form  [formGroup]= "editReviewForm"  >
+   
+    
+    <label for="inputCity"></label>
+             <textarea name="review" id="" cols="100" rows="2"formControlName="reviewDescription"></textarea>
+             <br>
+     <button type="submit" (click)="updateReviewDetail()" class="btn" style="background-color: blue; color: aliceblue;" id="addButton" [disabled]="!editReviewForm.valid"><b>Update</b></button>
+     <button type="cancel" class="btn" style="background-color: blue; color: aliceblue;" id="cancelButton" (click)="cancel()" ><b>Cancel</b></button>
+     
+
+            </form>
+</div>
+<app-view-review></app-view-review>

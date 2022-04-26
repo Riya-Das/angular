@@ -1,0 +1,34 @@
+<app-admin-navbar></app-admin-navbar>
+<div class="head"><h3 >Add Addon Plans</h3></div>
+<div class="container" >
+        <div class="body ">
+        <form  [formGroup]= "addAddonForm"  (ngSubmit)="postAddonDetail();">
+           
+            
+            <label for="inputCity">Recharge Type</label>
+                     <input type="text" class="form-control" id="planType" placeholder="Recharge Tppe" formControlName="addonType" >
+                      <span *ngIf="addAddonForm.controls['addonType'].touched && addAddonForm.controls['addonType'].hasError('required')">Enter Recharge Type</span>
+                      <br>
+            <label for="inputCity">Recharge Name</label>
+                      <input type="text" class="form-control" id="planName" placeholder="Recharge Name" formControlName="addonName" >
+                      <span *ngIf="addAddonForm.controls['addonName'].touched && addAddonForm.controls['addonName'].hasError('required')">Enter Recharge Name</span>
+                      <br>
+            <label for="inputCity">Recharge Price</label>
+                      <input type="text" class="form-control" id="planPrice" placeholder="Recharge Price" formControlName="addonPrice" >
+                      <span *ngIf="addAddonForm.controls['addonPrice'].touched && addAddonForm.controls['addonPrice'].hasError('required')">Enter Recharge Price</span>
+                      <span *ngIf="addAddonForm.controls['addonPrice'].touched && addAddonForm.controls['addonPrice'].hasError('pattern')">Please, Enter Valid Recharge Price.</span>
+                      <br>
+                      <label for="inputCity">Description</label>
+                      <input type="text" class="form-control" id="planDescription" placeholder="Description" formControlName="addonDescription" >
+                      <span *ngIf="addAddonForm.controls['addonDescription'].touched && addAddonForm.controls['addonDescription'].hasError('required')">Enter Description</span>
+                      <br>
+            <label for="inputCity">validity</label>
+                      <input type="text" class="form-control" id="planValidity" placeholder="Plan validity" formControlName="addonValidity" >
+                      <span *ngIf="addAddonForm.controls['addonValidity'].touched && addAddonForm.controls['addonValidity'].hasError('required')">Enter plan Validity</span>
+                      <br>
+            <button type="submit" class="btn" style="background-color: blue; color: aliceblue;" id="addButton" [disabled]="!addAddonForm.valid"><b>Add</b></button>
+            <button type="cancel" class="btn" style="background-color: blue; color: aliceblue;" id="cancelButton" (click)="cancel()" ><b>Cancel</b></button>
+    
+        </form>
+    </div>
+    </div>

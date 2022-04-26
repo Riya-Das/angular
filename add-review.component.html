@@ -1,0 +1,14 @@
+<app-user-navbar></app-user-navbar>
+
+<div class="head"><b>Add Review </b></div>    
+<div class="body ">
+    <form  [formGroup]= "addReviewForm"  >
+       
+        
+        <label for="inputCity"></label>
+                 <textarea name="review" id="" cols="100" rows="2"formControlName="reviewDescription"></textarea>
+                 <br>
+         <button type="submit" class="btn" style="background-color: blue; color: aliceblue;" id="addButton" (click)="post()" [disabled]="!addReviewForm.valid"><b>Add</b></button>
+         <button type="cancel" class="btn" style="background-color: blue; color: aliceblue;" id="cancelButton" (click)="cancel()" ><b>Cancel</b></button>
+    </form>
+</div>

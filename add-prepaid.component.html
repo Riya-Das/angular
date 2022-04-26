@@ -1,0 +1,38 @@
+<app-admin-navbar></app-admin-navbar>
+<div class="container" >
+    <div class="head"><b>Add Plan </b></div>    
+        <div class="body ">
+        <form  [formGroup]= "addPrepaidForm"  (ngSubmit)="postPrepaidDetail();">
+           
+            
+            <label for="inputCity">Recharge Type</label>
+                      <input type="text" class="form-control" id="planType" placeholder="Recharge Type" formControlName="RechargeType" >
+                      <span *ngIf="addPrepaidForm.controls['RechargeType'].touched && addPrepaidForm.controls['RechargeType'].hasError('required')">Enter Recharge Type</span>
+                      <br>
+            <label for="inputCity">Recharge Name</label>
+                      <input type="text" class="form-control" id="planName" placeholder="Recharge Name" formControlName="RechargeName" >
+                      <span *ngIf="addPrepaidForm.controls['RechargeName'].touched && addPrepaidForm.controls['RechargeName'].hasError('required')">Enter Recharge Name</span>
+                      <br>
+            <label for="inputCity">Recharge Price</label>
+                      <input type="text" class="form-control" id="planPrice" placeholder="Recharge Price" formControlName="RechargePrice" >
+                      <span *ngIf="addPrepaidForm.controls['RechargePrice'].touched && addPrepaidForm.controls['RechargePrice'].hasError('required')">Enter Recharge Price</span>
+                      <span *ngIf="addPrepaidForm.controls['RechargePrice'].touched && addPrepaidForm.controls['RechargePrice'].hasError('pattern')">Please, Enter Valid Recharge Price.</span>
+                      <br>
+                      <label for="inputCity">Description</label>
+                      <input type="text" class="form-control" id="planDescription" placeholder="Description" formControlName="Description" >
+                      <span *ngIf="addPrepaidForm.controls['Description'].touched && addPrepaidForm.controls['Description'].hasError('required')">Enter Description</span>
+                      <br>
+            <label for="inputCity">Offer</label>
+                      <input type="text" class="form-control" id="planOffer" placeholder="Offer" formControlName="Offer" >
+                      <span *ngIf="addPrepaidForm.controls['Offer'].touched && addPrepaidForm.controls['Offer'].hasError('required')">Enter Offer</span>
+                      <br>
+            <label for="inputCity">validity</label>
+                      <input type="text" class="form-control" id="planValidity" placeholder="Plan validity" formControlName="planValidity" >
+                      <span *ngIf="addPrepaidForm.controls['planValidity'].touched && addPrepaidForm.controls['planValidity'].hasError('required')">Enter plan Validity</span>
+                      <br>
+            <button type="submit" class="btn" style="background-color: blue; color: aliceblue;" id="addButton" [disabled]="!addPrepaidForm.valid"><b>Add</b></button>
+            <button type="cancel" class="btn" style="background-color: blue; color: aliceblue;" id="cancelButton" (click)="cancel()" ><b>Cancel</b></button>
+    
+        </form>
+    </div>
+    </div>

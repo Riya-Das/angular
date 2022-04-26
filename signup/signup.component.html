@@ -1,0 +1,41 @@
+<div class="container" >
+    <div class="head"><b>Register</b></div>    
+        <div class="body ">
+        <form  [formGroup]= "signupForm"  (ngSubmit)="postData();">
+            <label for="" id="admin/user">Enter Admin/User</label>
+                <select  name="admin/user" id="" formControlName="adminuser">
+                    <option style="color: black;" value="User">User</option>
+                    <option style="color: rgb(25, 24, 26);" value="Admin">Admin</option>
+                </select>
+                <br>
+                <span *ngIf="signupForm.controls['adminuser'].touched && signupForm.controls['adminuser'].hasError('required')">select Admin or User</span>
+    
+                <br>
+            <label for="inputEmail4">Email</label>
+                      <input type="email" class="form-control" id="email" placeholder="Email" formControlName="emailaddress">
+                      <span *ngIf="signupForm.controls['emailaddress'].touched && signupForm.controls['emailaddress'].hasError('required')">Enter emai address</span>
+                      <span *ngIf="signupForm.controls['emailaddress'].touched && signupForm.controls['emailaddress'].hasError('email')">Enter valid emai address</span>
+                      <br>
+            <label for="inputCity">UserName</label>
+                      <input type="text" class="form-control" id="username" placeholder="User Name" formControlName="username" >
+                      <span *ngIf="signupForm.controls['username'].touched && signupForm.controls['username'].hasError('required')">Enter user name</span>
+                      <br>
+            <label for="inputCity">Mobile Number</label>
+                      <input type="text" class="form-control" id="mobileNumber" placeholder="Mobile Number" formControlName="Mobile" >
+                      <span *ngIf="signupForm.controls['Mobile'].touched && signupForm.controls['Mobile'].hasError('required')">Enter Mobile Number</span>
+                      <span *ngIf="signupForm.controls['Mobile'].touched && signupForm.controls['Mobile'].hasError('pattern')">Please, Enter 10 digit Mobile Number.</span>
+                      <br>
+            <label for="inputPassword4">Password</label>
+                      <input type="password" class="form-control" id="password" placeholder="Password" formControlName="Password">
+                      <span *ngIf="signupForm.controls['Password'].touched && signupForm.controls['Password'].hasError('required')">Enter Password</span>
+                      <br>
+            <label for="inputCity">confirm Password</label>
+                      <input type="password" class="form-control" id="ConfirmPassword"placeholder="Confirm Password" formControlName="ConfirmPassword" >
+                      <span *ngIf="signupForm.controls['ConfirmPassword'].touched && signupForm.controls['ConfirmPassword'].hasError('required')">Confirm Password is required</span>
+                      <br>
+            <button type="submit" class="btn btn-primary" id="submitButton" [disabled]="!signupForm.valid"><b>Signup</b></button>
+           <p>Already Registered? <a id="signinLink"style="color: rgb(25, 24, 26);" href="./login"> sign in</a></p> 
+    
+        </form>
+    </div>
+    </div>

@@ -1,0 +1,30 @@
+<app-admin-navbar></app-admin-navbar>
+<div class="container" >
+        <div class="body ">
+        <form  [formGroup]= "editPrepaidForm"  (ngSubmit)="UpdatePrepaidPlan();">
+           
+            
+            <label for="inputCity">Recharge Type</label>
+                      <input type="text" class="form-control" id="planType" placeholder="Recharge Type" formControlName="prepaidType" >
+                      <br>
+            <label for="inputCity">Recharge Name</label>
+                      <input type="text" class="form-control" id="planName" placeholder="Recharge Name" formControlName="prepaidName" >
+                      <br>
+            <label for="inputCity">Recharge Price</label>
+                      <input type="text" class="form-control" id="planPrice" placeholder="Recharge Price" formControlName="prepaidPrice" >
+                      <br>
+                      <label for="inputCity">Description</label>
+                      <input type="text" class="form-control" id="planDescription" placeholder="Description" formControlName="prepaidDescription" >
+                      <br>
+            <label for="inputCity">Offer</label>
+                      <input type="text" class="form-control" id="planOffer" placeholder="Offer" formControlName="prepaidOffer" >
+                      <br>
+            <label for="inputCity">validity</label>
+                      <input type="text" class="form-control" id="planValidity" placeholder="Plan validity" formControlName="prepaidValidity" >
+                      <br>
+            <button type="submit" class="btn" style="background-color: blue; color: aliceblue;" id="addButton" [disabled]="!editPrepaidForm.valid"><b>Update</b></button>
+            <button type="cancel" class="btn" style="background-color: blue; color: aliceblue;" id="cancelButton" (click)="cancel()" ><b>Cancel</b></button>
+    
+        </form>
+    </div>
+    </div>

@@ -1,0 +1,33 @@
+<app-admin-navbar></app-admin-navbar>
+<button><a href="addPrepaid"><b>Add</b></a> </button>
+
+<table class="table" >
+    <thead style="background-color: brown;"> 
+        <tr>
+            <th scope="col">Plan Type</th>
+            <th scope="col">Plan Name</th>
+            <th scope="col">Plan Price</th>
+            <th scope="col">Description</th>
+            <th scope="col">offer</th>
+            <th scope="col">Validity</th>
+            <th scope="col">Action</th>
+
+
+        </tr>
+    </thead>
+    <tbody style="background-color: rgb(214, 165, 165);">
+        <tr *ngFor="let row of prepaiddata">
+            <td>{{row.prepaidType}}</td>
+            <td>{{row.prepaidName}}</td>
+            <td>{{row.prepaidPrice}}</td>
+            <td>{{row.prepaidDescription}}</td>
+            <td>{{row.prepaidOffer}}</td>
+            <td>{{row.prepaidValidity}}</td>
+            <td>
+                <button><a href="editPrepaid/{{row.id}}">Edit</a> </button>
+                <button (click)="DeletePlan(row.id)">Delete</button>
+            </td>
+            
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,32 @@
+<app-user-navbar></app-user-navbar>
+<div class="container" >
+    <div class="body ">
+    <form  [formGroup]= "rechargeForm"  (ngSubmit)="submit();">
+       
+        
+        <label for="inputCity">Mobile Number</label>
+                  <input type="text" class="form-control" id="planOffer" placeholder="Mobile Number" formControlName="mobileNumber" >
+                  <br>
+        <label for="inputCity">Name</label>
+                  <input type="text" class="form-control" id="planValidity" placeholder="Name" formControlName="name" >
+                  <br>
+        <label for="inputCity">emailId</label>
+                  <input type="text" class="form-control" id="planDescription" placeholder="Email ID" formControlName="emailId" >
+                  <br>
+        
+        <label for="inputCity">Recharge Type</label>
+                  <input type="text" class="form-control" id="planType" placeholder="Recharge Type" formControlName="postpaidType" >
+                  <br>
+        <label for="inputCity">Recharge Name</label>
+                  <input type="text" class="form-control" id="planName" placeholder="Recharge Name" formControlName="postpaidName" >
+                  <br>
+        <label for="inputCity">Recharge Price</label>
+                  <input type="text" class="form-control" id="planPrice" placeholder="Recharge Price" formControlName="postpaidPrice" >
+                  <br>
+                  
+        <button type="submit" class="btn" style="background-color: blue; color: aliceblue;" id="addButton" [disabled]="!rechargeForm.valid"><b><a href="notification">Recharge</a> </b></button>
+        <button type="cancel" class="btn" style="background-color: blue; color: aliceblue;" id="cancelButton" (click)="cancel()" ><b>Cancel</b></button>
+
+    </form>
+</div>
+</div>

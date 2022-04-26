@@ -1,0 +1,28 @@
+<app-admin-navbar></app-admin-navbar>
+<div class="head"><b>Update Addon Form </b></div>
+<div class="container" >
+        <div class="body ">
+        <form  [formGroup]= "editAddonForm"  (ngSubmit)="UpdateAddonPlan();">
+           
+            
+            <label for="inputCity">Recharge Type</label>
+                      <input type="text" class="form-control" id="planType" placeholder="Recharge Type" formControlName="addonType" >
+                      <br>
+            <label for="inputCity">Recharge Name</label>
+                      <input type="text" class="form-control" id="planName" placeholder="Recharge Name" formControlName="addonName" >
+                      <br>
+            <label for="inputCity">Recharge Price</label>
+                      <input type="text" class="form-control" id="planPrice" placeholder="Recharge Price" formControlName="addonPrice" >
+                      <br>
+                      <label for="inputCity">Description</label>
+                      <input type="text" class="form-control" id="planDescription" placeholder="Description" formControlName="addonDescription" >
+                      <br>
+            <label for="inputCity">validity</label>
+                      <input type="text" class="form-control" id="planValidity" placeholder="Plan validity" formControlName="addonValidity" >
+                      <br>
+            <button type="submit" class="btn" style="background-color: blue; color: aliceblue;" id="addButton" [disabled]="!editAddonForm.valid"><b>Update</b></button>
+            <button type="cancel" class="btn" style="background-color: blue; color: aliceblue;" id="cancelButton" (click)="cancel()" ><b>Cancel</b></button>
+    
+        </form>
+    </div>
+    </div>

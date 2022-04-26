@@ -1,0 +1,31 @@
+<app-admin-navbar></app-admin-navbar>
+<div class="head"><b>Update Postpaid Form </b></div>
+<div class="container" >
+        <div class="body ">
+        <form  [formGroup]= "editPostpaidForm"  (ngSubmit)="UpdatePostpaidPlan();">
+           
+            
+            <label for="inputCity">Recharge Type</label>
+                      <input type="text" class="form-control" id="planType" placeholder="Recharge Type" formControlName="postpaidType" >
+                      <br>
+            <label for="inputCity">Recharge Name</label>
+                      <input type="text" class="form-control" id="planName" placeholder="Recharge Name" formControlName="postpaidName" >
+                      <br>
+            <label for="inputCity">Recharge Price</label>
+                      <input type="text" class="form-control" id="planPrice" placeholder="Recharge Price" formControlName="postpaidPrice" >
+                      <br>
+                      <label for="inputCity">Description</label>
+                      <input type="text" class="form-control" id="planDescription" placeholder="Description" formControlName="postpaidDescription" >
+                      <br>
+            <label for="inputCity">Offer</label>
+                      <input type="text" class="form-control" id="planOffer" placeholder="Offer" formControlName="postpaidOffer" >
+                      <br>
+            <label for="inputCity">validity</label>
+                      <input type="text" class="form-control" id="planValidity" placeholder="Plan validity" formControlName="postpaidValidity" >
+                      <br>
+            <button type="submit" class="btn" style="background-color: blue; color: aliceblue;" id="addButton" [disabled]="!editPostpaidForm.valid"><b>Update</b></button>
+            <button type="cancel" class="btn" style="background-color: blue; color: aliceblue;" id="cancelButton" (click)="cancel()" ><b>Cancel</b></button>
+    
+        </form>
+    </div>
+    </div>
